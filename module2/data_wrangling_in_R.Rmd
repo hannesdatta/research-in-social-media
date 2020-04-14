@@ -176,38 +176,6 @@ select(df_artists, name) # selects everything
 dt_artists[, c('name')] # selects everything
 ```
 
-# 1. Filtering/querying/subsetting
-
-The first set of operations we're going to review are "filters", which sometimes are also referred to as querying ("searching"), or subsetting your data ("showing only a part of what is there").
-
-There are two types of filters: filtering for particular rows, and filtering for particular columns.
-
-## Rows
-
-Let's start querying for some observations in rows. For example, we could "filter" for all artists that have the name Adele.
-
-**SQL**
-
-```{r}
-run_query('SELECT * FROM artists WHERE artists.name = "Adele"')
-```
-
-**dplyr**
-
-To use the `dplyr` syntax, we have to run our commands on the `df_` tables saved above.
-
-```{r}
-filter(df_artists, name == 'Adele')
-```
-
-**data.table**
-
-To use the `data.table` syntax, we have to run our commands on the `dt_` tables savbed above.
-
-```{r}
-dt_artists[name == 'Adele']
-```
-
 # 2. Sorting/ordering data
 
 Sometimes, it's super useful to order your data (or the results of some query). For example, let's sort the total plays in Argentinaß before May 2015.
