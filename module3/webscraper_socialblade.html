@@ -13084,7 +13084,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>This version: 24 April 2020</em></p>
+<p><em>This version: 4 May 2020</em></p>
 <p>Comments: h.datta@tilburguniversity.edu</p>
 <p><strong>Requires Python 3.x</strong></p>
 
@@ -13108,6 +13108,14 @@ pip install cssselect</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><font color='red'>**ATTENTION:**</font> Recall that by the time you're running this notebook, the website we're using in this example may have changed its layout. So don't be surprised if some of the CSS selectors we use in the examples don't work anymore. Instead, directly debub the CSS selector by opening Chrome, navigating to the website, and opening the Developer Tools to copy the CSS selector of your desired target element.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Load-packages">Load packages<a class="anchor-link" href="#Load-packages">&#182;</a></h2>
 </div>
 </div>
@@ -13118,7 +13126,7 @@ pip install cssselect</code></pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load packages into memory</span>
-<span class="kn">import</span> <span class="nn">urllib3</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span> 
 <span class="kn">from</span> <span class="nn">lxml.cssselect</span> <span class="kn">import</span> <span class="n">CSSSelector</span>
@@ -13198,7 +13206,7 @@ pip install cssselect</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">browser</span><span class="o">=</span><span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
@@ -13219,7 +13227,7 @@ pip install cssselect</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://socialblade.com/youtube/user/enzoknol&#39;</span><span class="p">)</span>
@@ -13241,7 +13249,7 @@ pip install cssselect</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;#socialblade-user-content &gt; div:nth-child(8) &gt; div:nth-child(1) &gt; div:nth-child(2) &gt; p:nth-child(1)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -13249,24 +13257,6 @@ pip install cssselect</code></pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>€148.7K - €2.4M
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13288,7 +13278,7 @@ pip install cssselect</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;enzoknol&#39;</span><span class="p">,</span> <span class="s1">&#39;officialtrapcity&#39;</span><span class="p">,</span> <span class="s1">&#39;martingarrix&#39;</span><span class="p">,</span> <span class="s1">&#39;rtlthevoice&#39;</span><span class="p">]</span>
@@ -13315,27 +13305,6 @@ pip install cssselect</code></pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>enzoknol
-officialtrapcity
-martingarrix
-rtlthevoice
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13346,7 +13315,7 @@ rtlthevoice
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;enzoknol&#39;</span><span class="p">,</span> <span class="s1">&#39;officialtrapcity&#39;</span><span class="p">,</span> <span class="s1">&#39;martingarrix&#39;</span><span class="p">,</span> <span class="s1">&#39;rtlthevoice&#39;</span><span class="p">]</span>
@@ -13365,43 +13334,6 @@ rtlthevoice
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>http://www.socialblade.com/youtube/user/enzoknol
-http://www.socialblade.com/youtube/user/officialtrapcity
-http://www.socialblade.com/youtube/user/martingarrix
-http://www.socialblade.com/youtube/user/rtlthevoice
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[{&#39;user&#39;: &#39;enzoknol&#39;, &#39;yearlyincome&#39;: &#39;€12.4K - €198.2K&#39;},
- {&#39;user&#39;: &#39;officialtrapcity&#39;, &#39;yearlyincome&#39;: &#39;€10.8K - €173.3K&#39;},
- {&#39;user&#39;: &#39;martingarrix&#39;, &#39;yearlyincome&#39;: &#39;€10.3K - €164.4K&#39;},
- {&#39;user&#39;: &#39;rtlthevoice&#39;, &#39;yearlyincome&#39;: &#39;€4.8K - €77.3K&#39;}]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13569,7 +13501,7 @@ http://www.socialblade.com/youtube/user/rtlthevoice
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.op.gg/champion/kled/statistics/top&#39;</span><span class="p">)</span>
@@ -13590,7 +13522,7 @@ http://www.socialblade.com/youtube/user/rtlthevoice
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s1">&#39;body &gt; div.l-wrap.l-wrap--champion &gt; div.l-container &gt; div &gt; div.tabWrap._recognized &gt; div.l-champion-statistics-content.tabItems &gt; div.tabItem.Content.championLayout-overview &gt; div &gt; div.l-champion-statistics-content__main &gt; table.champion-overview__table.champion-overview__table--summonerspell &gt; tbody:nth-child(3) &gt; tr:nth-child(1) &gt; td.champion-overview__stats.champion-overview__stats--pick&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
@@ -13599,25 +13531,6 @@ http://www.socialblade.com/youtube/user/rtlthevoice
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>77.44%
-7,823
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
